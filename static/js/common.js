@@ -249,6 +249,34 @@ kakakoMapInit();
 // Work
 function workUI() {
   const cateSwiper = new Swiper('.cate-swiper', {
-    slidesPerView: 'auto'
+    slidesPerView: 'auto',
+    itemSelector: '.grid-item'
   });
+
+  var $grid = $('.work-wrap .grid').masonry({
+    itemSelector: '.grid-item'
+  });
+
+  $('.work-sortItem').on('click', function () {
+    $('.grid-item').eq(2).remove();
+    $grid.masonry();
+  });
+
+  // append item
+  $('.append').on('click', function () {
+    const elems = [getItemElement()];
+
+    const $elems = $(elems);
+    $grid.append($elems).masonry('appended', $elems);
+  });
+
+  function getItemElement() {
+    const elem = document.createElement('div');
+    elem.className = 'grid-item';
+
+    const img = document.createElement('img');
+    img.src = '../static/images/img/work-test.png';
+    elem.appendChild(img);
+    return elem;
+  }
 }
