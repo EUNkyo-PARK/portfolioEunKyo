@@ -1,3 +1,9 @@
+$(function () {
+  commonUI();
+  mainUI();
+  kakakoMapInit();
+});
+
 function commonUI() {
   // gnb 메뉴
   let $gnbTxt = $('.commonGnb li a');
@@ -87,11 +93,11 @@ function commonUI() {
   menuPop();
   scrollTop();
 }
-commonUI();
 
 // 메인
 //let mainBanner;
 function mainUI() {
+  if (!$('#wrapper').hasClass('main')) return;
   const wrapper = document.querySelector('#container');
   const dragElement = document.querySelector('.main-slide-wrap');
   const cateList = document.querySelector('.contents-box');
@@ -245,7 +251,6 @@ function kakakoMapInit() {
   });
   marker.setMap(map);
 }
-kakakoMapInit();
 
 // Work
 function workUI() {
