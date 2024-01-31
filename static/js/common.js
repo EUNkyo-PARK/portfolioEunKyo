@@ -1,7 +1,6 @@
 $(function () {
   commonUI();
   mainUI();
-  kakakoMapInit();
 });
 
 function commonUI() {
@@ -216,7 +215,7 @@ function mainUI() {
 }
 
 //map
-function kakakoMapInit() {
+function kakakoMapInit(imgsrc, imgWidth, imgHeight) {
   const mapContainer = document.getElementById('companyMap');
   if (!mapContainer) return;
   const mapLocation = {
@@ -229,18 +228,18 @@ function kakakoMapInit() {
   };
   const map = new kakao.maps.Map(mapContainer, mapOptions);
 
-  const imageSrc = '../static/images/common/map_marker.png'; // 마커이미지의 주소
+  const imageSrc = imgsrc; // 마커이미지의 주소
   let imageSize;
   let imageOption;
   if (window.innerWidth < 800) {
-    imageSize = new kakao.maps.Size(55, 64); // 마커이미지의 크기
+    imageSize = new kakao.maps.Size(imgWidth / 2, imgHeight / 2); // 마커이미지의 크기
     imageOption = {
-      offset: new kakao.maps.Point(27.5, 64)
+      offset: new kakao.maps.Point(imgWidth / 4, imgHeight / 2)
     };
   } else {
-    imageSize = new kakao.maps.Size(110, 128); // 마커이미지의 크기
+    imageSize = new kakao.maps.Size(imgWidth, imgHeight); // 마커이미지의 크기
     imageOption = {
-      offset: new kakao.maps.Point(55, 128)
+      offset: new kakao.maps.Point(imgWidth / 2, imgHeight)
     };
   }
   const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
