@@ -353,9 +353,9 @@
     height: 47.8rem;
     border-radius: 2.4rem;
     opacity: 0;
-    box-shadow: 0 1rem 0.8rem 0.8rem rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 0 1rem 0.8rem 0.8rem rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 1rem 0.8rem 0.8rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0.8rem 0.8rem 3rem 0 rgba(0, 0, 0, 0.12), 0.2rem 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0.8rem 0.8rem 3rem 0 rgba(0, 0, 0, 0.12), 0.2rem 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0.8rem 0.8rem 3rem 0 rgba(0, 0, 0, 0.12), 0.2rem 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.08);
     transition: 0.3s ease-out all;
     ol {
       justify-content: flex-start;
