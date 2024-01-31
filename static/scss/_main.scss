@@ -8,7 +8,7 @@
     }
     .h1 {
       a {
-        background: url(../images/common/hic-logo.png) no-repeat 0 0 / cover;
+        background: url(../img/common/hic-logo.png) no-repeat 0 0 / cover;
       }
     }
     .btn-menu {
@@ -190,16 +190,16 @@
             transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) all;
           }
           &.-uxw::before {
-            background-image: url(../images/main/bg-boxImage01.png);
+            background-image: url(../img/main/bg-boxImage01.png);
           }
           &.-uxm::before {
-            background-image: url(../images/main/bg-boxImage02.png);
+            background-image: url(../img/main/bg-boxImage02.png);
           }
           &.-ai::before {
-            background-image: url(../images/main/bg-boxImage03.png);
+            background-image: url(../img/main/bg-boxImage03.png);
           }
           &.-vui::before {
-            background-image: url(../images/main/bg-boxImage04.png);
+            background-image: url(../img/main/bg-boxImage04.png);
           }
         }
       }
@@ -388,7 +388,7 @@
             width: 10rem;
             height: 10.9rem;
             margin-top: 1.9rem;
-            background: url(../images/main/img-aapAward-symbol.png) no-repeat 0 0 / cover;
+            background: url(../img/main/img-aapAward-symbol.png) no-repeat 0 0 / cover;
           }
         }
       }
