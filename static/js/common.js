@@ -254,30 +254,31 @@ function workUI() {
     itemSelector: '.grid-item'
   });
 
-  var $grid = $('.work-wrap .grid').masonry({
-    itemSelector: '.grid-item'
+  var $grid = $('.grid').isotope({
+    itemSelector: '.grid-item',
+    layoutMode: 'fitRows'
   });
 
-  $('.work-sortItem').on('click', function () {
-    $('.grid-item').eq(2).remove();
-    $grid.masonry();
+  // filter functions
+  var filterFns = {};
+
+  $('.cate-swiper').on('click', '.work-sortItem', function () {
+    var filterValue = $(this).attr('data-filter');
+
+    console.log(filterValue);
+    // use filterFn if matches value
+    // filterValue = filterFns[filterValue] || filterValue;
+    $grid.isotope({ filter: filterValue });
   });
 
-  // append item
-  $('.append').on('click', function () {
-    const elems = [getItemElement()];
+  // $('.cate-swiper').each(function (i, buttonGroup) {
+  //   var $buttonGroup = $(buttonGroup);
+  //   $buttonGroup.on('click', '.work-sortItem', function () {
+  //     $buttonGroup.find('.is-checked').removeClass('is-checked');
+  //     $(this).addClass('is-checked');
+  //   });
+  // });
 
-    const $elems = $(elems);
-    $grid.append($elems).masonry('appended', $elems);
-  });
-
-  function getItemElement() {
-    const elem = document.createElement('div');
-    elem.className = 'grid-item';
-
-    const img = document.createElement('img');
-    img.src = '../static/images/img/work-test.png';
-    elem.appendChild(img);
-    return elem;
-  }
+  // element argument can be a selector string
+  //   for an individual element
 }
