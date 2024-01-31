@@ -212,6 +212,7 @@ function mainUI() {
 //map
 function kakakoMapInit() {
   const mapContainer = document.getElementById('companyMap');
+  if (!mapContainer) return;
   const mapLocation = {
     x: 37.530733879674145,
     y: 126.89887339311068
