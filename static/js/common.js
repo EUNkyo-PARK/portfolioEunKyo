@@ -39,7 +39,6 @@ function commonUI() {
 
     body.on('click', function (event) {
       if (!openBtn.is(event.target) && !$('.commonGnb a').is(event.target)) {
-        console.log(1);
         $('body').removeClass('gnbPopup');
       }
     });
@@ -248,26 +247,37 @@ function kakakoMapInit() {
 }
 kakakoMapInit();
 
-function workList() {
-  // init Masonry
-  var $grid = $('.grid').masonry({
-    // fitWidth: true
+// Work
+function workUI() {
+  const cateSwiper = new Swiper('.cate-swiper', {
+    slidesPerView: 'auto',
+    itemSelector: '.grid-item'
   });
-  // layout Masonry after each image loads
-  $grid.imagesLoaded().progress(function () {
-    $grid.masonry('layout');
-  });
-}
 
-kakakoMapInit();
-
-function workList() {
-  // init Masonry
-  var $grid = $('.grid').masonry({});
-  // layout Masonry after each image loads
-  $grid.imagesLoaded().progress(function () {
-    $grid.masonry({
-      horizontalOrder: true
-    });
+  var $grid = $('.work-wrap .grid').masonry({
+    itemSelector: '.grid-item'
   });
+
+  $('.work-sortItem').on('click', function () {
+    $('.grid-item').eq(2).remove();
+    $grid.masonry();
+  });
+
+  // append item
+  $('.append').on('click', function () {
+    const elems = [getItemElement()];
+
+    const $elems = $(elems);
+    $grid.append($elems).masonry('appended', $elems);
+  });
+
+  function getItemElement() {
+    const elem = document.createElement('div');
+    elem.className = 'grid-item';
+
+    const img = document.createElement('img');
+    img.src = '../static/images/img/work-test.png';
+    elem.appendChild(img);
+    return elem;
+  }
 }
