@@ -258,31 +258,13 @@ function workUI() {
     itemSelector: '.grid-item'
   });
 
-  var $grid = $('.grid').isotope({
+  var $grid = $('.work-wrap .grid').isotope({
     itemSelector: '.grid-item',
     layoutMode: 'fitRows'
   });
 
-  // filter functions
-  var filterFns = {};
-
   $('.cate-swiper').on('click', '.work-sortItem', function () {
     var filterValue = $(this).attr('data-filter');
-
-    console.log(filterValue);
-    // use filterFn if matches value
-    // filterValue = filterFns[filterValue] || filterValue;
     $grid.isotope({ filter: filterValue });
   });
-
-  // $('.cate-swiper').each(function (i, buttonGroup) {
-  //   var $buttonGroup = $(buttonGroup);
-  //   $buttonGroup.on('click', '.work-sortItem', function () {
-  //     $buttonGroup.find('.is-checked').removeClass('is-checked');
-  //     $(this).addClass('is-checked');
-  //   });
-  // });
-
-  // element argument can be a selector string
-  //   for an individual element
 }
