@@ -39,7 +39,6 @@ function commonUI() {
 
     body.on('click', function (event) {
       if (!openBtn.is(event.target) && !$('.commonGnb a').is(event.target)) {
-        console.log(1);
         $('body').removeClass('gnbPopup');
       }
     });
@@ -247,26 +246,9 @@ function kakakoMapInit() {
 }
 kakakoMapInit();
 
-function workList() {
-  // init Masonry
-  var $grid = $('.grid').masonry({
-    // fitWidth: true
-  });
-  // layout Masonry after each image loads
-  $grid.imagesLoaded().progress(function () {
-    $grid.masonry('layout');
-  });
-}
-
-kakakoMapInit();
-
-function workList() {
-  // init Masonry
-  var $grid = $('.grid').masonry({});
-  // layout Masonry after each image loads
-  $grid.imagesLoaded().progress(function () {
-    $grid.masonry({
-      horizontalOrder: true
-    });
+// Work
+function workUI() {
+  const cateSwiper = new Swiper('.cate-swiper', {
+    slidesPerView: 'auto'
   });
 }

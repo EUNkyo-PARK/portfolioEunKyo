@@ -36,82 +36,71 @@
           <div class="inner">
             <h2 class="sub-tit" id="pageTit">Work</h2>
             <div class="work-list">
-              <nav>
-                <ul>
-                  <li>
+              <nav class="cate-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
                     <label class="work-sortItem">
                       <input type="radio" name="workCate" checked />
                       <i class="lbl">ALL</i>
                     </label>
-                  </li>
-                  <li>
+                  </div>
+                  <div class="swiper-slide">
                     <label class="work-sortItem">
                       <input type="radio" name="workCate" />
                       <i class="lbl">#Bank</i>
                     </label>
-                  </li>
-                  <li>
+                  </div>
+                  <div class="swiper-slide">
                     <label class="work-sortItem">
                       <input type="radio" name="workCate" />
                       <i class="lbl">#Insurance</i>
                     </label>
-                  </li>
-                  <li>
+                  </div>
+                  <div class="swiper-slide">
                     <label class="work-sortItem">
                       <input type="radio" name="workCate" />
                       <i class="lbl">#Card</i>
                     </label>
-                  </li>
-                  <li>
+                  </div>
+                  <div class="swiper-slide">
                     <label class="work-sortItem">
                       <input type="radio" name="workCate" />
                       <i class="lbl">#AI</i>
                     </label>
-                  </li>
-                  <li>
+                  </div>
+                  <div class="swiper-slide">
                     <label class="work-sortItem">
                       <input type="radio" name="workCate" />
                       <i class="lbl">#VUI</i>
                     </label>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </nav>
               <div>
-                <style>
-                  .grid-item img {
-                    width: 100%;
-                  }
-                  .grid-item {
-                    width: 33.3333%;
-                  }
-                  .grid-item--width2 {
-                    width: 50%;
-                  }
-                </style>
                 <div class="grid">
                   <div class="grid-item">
-                    <img src="https://source.unsplash.com/random/440x560" alt="더미이미지" />
+                    <img src="../static/images/img/work-test.png" alt="더미이미지" />
                   </div>
                   <div class="grid-item">
-                    <img src="https://source.unsplash.com/random/440x560" alt="더미이미지" />
+                    <img src="../static/images/img/work-test.png" alt="더미이미지" />
                   </div>
                   <div class="grid-item">
-                    <img src="https://source.unsplash.com/random/440x560" alt="더미이미지" />
-                  </div>
-                  <div class="grid-item grid-item--width2">
-                    <img src="https://source.unsplash.com/random/440x560" alt="더미이미지" />
-                  </div>
-                  <div class="grid-item grid-item--width2">
-                    <img src="https://source.unsplash.com/random/440x560" alt="더미이미지" />
+                    <img src="../static/images/img/work-test.png" alt="더미이미지" />
                   </div>
                   <div class="grid-item">
-                    <img src="https://source.unsplash.com/random/440x560" alt="더미이미지" />
+                    <img src="../static/images/img/work-test.png" alt="더미이미지" />
                   </div>
                   <div class="grid-item">
-                    <img src="https://source.unsplash.com/random/440x560" alt="더미이미지" />
+                    <img src="../static/images/img/work-test.png" alt="더미이미지" />
                   </div>
                   <div class="grid-item">
-                    <img src="https://source.unsplash.com/random/440x560" alt="더미이미지" />
+                    <img src="../static/images/img/work-test.png" alt="더미이미지" />
+                  </div>
+                  <div class="grid-item">
+                    <img src="../static/images/img/work-test.png" alt="더미이미지" />
+                  </div>
+                  <div class="grid-item">
+                    <img src="../static/images/img/work-test.png" alt="더미이미지" />
                   </div>
                 </div>
               </div>
@@ -129,12 +118,10 @@
     <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7aaf489efb791b1c23ef6259164ddf9d"></script>
     <script src="../static/js/jquery-3.7.1.min.js"></script>
     <script src="../static/js/jquery-migrate-3.4.0.min.js"></script>
-    <script src="../static/js/lib/masonry.pkgd.min.js"></script>
+    <script src="../static/js/lib/swiper-bundle.11.0.5.min.js"></script>
     <script src="../static/js/common.js"></script>
     <script>
-      $(function () {
-        workList();
-      });
+      workUI();
     </script>
   </body>
 </html>

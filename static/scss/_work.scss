@@ -1,11 +1,33 @@
 @use 'sass:math';
+/* work list */
+.grid-item img {
+  width: 100%;
+}
+.grid {
+  display: grid;
+  box-sizing: border-box;
+  grid-gap: 8rem 4rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.grid-item:nth-child(4),
+.grid-item:nth-child(5) {
+  grid-column: span 6;
+}
+.grid-item {
+  grid-column: span 4;
+}
+.work-sortItem {
+  width: auto;
+  display: inline-block;
+}
+
 /* work */
 .pc-break {
   display: none;
 }
 .work-contents {
   .sub-tit {
-    font-family: 'Pretendard';
     font-size: 4.8rem;
     font-weight: 800;
     line-height: 5.7rem;
@@ -15,7 +37,6 @@
     padding: 0 2rem;
   }
   .sub-txt {
-    font-family: 'Pretendard';
     font-weight: 600;
     font-size: 1.6rem;
   }
