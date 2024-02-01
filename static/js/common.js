@@ -304,9 +304,9 @@ function newsUI() {
     itemSelector: '.grid-item',
     masonry: {}
   });
-  $newsGrid.imagesLoaded().progress(function () {
-    $newsGrid.isotope('layout');
-  });
+  // $newsGrid.imagesLoaded().progress(function () {
+  //   $newsGrid.isotope('layout');
+  // });
 }
 
 /*** util ***/
