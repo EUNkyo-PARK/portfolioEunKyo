@@ -321,10 +321,15 @@ function memeberUI() {
 
     clickCount += 1;
     if (clickCount >= 5) {
-      console.log('5번 이상 클릭되었습니다!');
+      hiddenMenuToggle();
       clickCount = 0;
       clearTimeout(clickTimeout);
     }
+  }
+
+  function hiddenMenuToggle() {
+    const footerHidden = document.querySelector('.foot-hidden-wrap');
+    footerHidden.classList.toggle('active');
   }
 
   // 클릭 이벤트를 감지할 요소 선택
