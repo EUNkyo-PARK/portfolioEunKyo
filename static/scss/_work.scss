@@ -209,13 +209,13 @@
       max-width: 100%;
     }
     .sub-tit {
-      padding: 0 0 0 25.8rem;
+      padding: 0;
       font-size: 8rem;
       line-height: 9.5rem;
     }
     .sub-txt-box {
       margin-top: 11rem;
-      padding: 0 0 0 25.8rem;
+      padding: 0;
     }
     .sub-txt {
       font-weight: 500;
@@ -241,6 +241,8 @@
       }
     }
     .next-page-box {
+      width: calc(100% + 16rem);
+      margin-left: -8rem;
       height: 50rem;
       background-attachment: fixed;
       a {
@@ -252,6 +254,14 @@
           line-height: 2.8rem;
         }
       }
+    }
+    .detail-area {
+      width: calc(100% + 16rem);
+      margin-left: -8rem;
+    }
+    .visual-img-box {
+      width: calc(100% + 16rem);
+      margin-left: -8rem;
     }
   }
 }
@@ -276,6 +286,21 @@
       }
     }
   }
+  .work-contents {
+    .detail-area {
+      width: calc(100% + 52rem);
+      margin-left: -26rem;
+    }
+    .visual-img-box {
+      width: calc(100% + 52rem);
+      margin-left: -26rem;
+    }
+    .next-page-box {
+      width: calc(100% + 52rem);
+      margin-left: -26rem;
+    }
+  }
+
   .work-wrap {
     margin: 0 -2rem;
     .grid-item {
