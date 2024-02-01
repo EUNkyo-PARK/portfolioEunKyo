@@ -272,18 +272,18 @@ function workUI() {
     itemSelector: '.grid-item'
   });
 
-  var $grid = $('.work-wrap .grid').isotope({
+  const $grid = $('.work-wrap .grid').isotope({
     layoutMode: 'packery',
     itemSelector: '.grid-item'
   });
 
-  var $gridItems = $('.work-wrap .grid-item');
-  var visibleSiblings = $gridItems.siblings().filter(function () {
+  const $gridItems = $('.work-wrap .grid-item');
+  const visibleSiblings = $gridItems.siblings().filter(function () {
     return $gridItems.css('display') !== 'none';
   });
 
-  var fourthElement = visibleSiblings.eq(3);
-  var fifthElement = visibleSiblings.eq(4);
+  const fourthElement = visibleSiblings.eq(3);
+  const fifthElement = visibleSiblings.eq(4);
 
   //$grid.isotope('shuffle');
 
@@ -294,6 +294,14 @@ function workUI() {
     $gridItems.removeClass('width-50');
     fourthElement.addClass('width-50');
     fifthElement.addClass('width-50');
+  });
+}
+
+// news
+function newsUI() {
+  var $newsGrid = $('.news-wrap .grid').isotope({
+    layoutMode: 'packery',
+    itemSelector: '.grid-item'
   });
 }
 
