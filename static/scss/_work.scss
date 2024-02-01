@@ -7,12 +7,7 @@
     margin-top: 1.6rem;
     &.fixed {
       position: fixed;
-      top: 8rem;
-      background-color: $white-color;
-      width: 100%;
-      left: 0;
-      margin: 0;
-      padding: 1rem 2rem;
+      top: 0;
     }
   }
   .swiper-slide {
@@ -150,11 +145,13 @@
       justify-content: center;
       row-gap: 1.6rem;
       height: 100%;
+      padding: 0 5.4rem;
       color: $white-color;
       font-size: 3.2rem;
       line-height: 3.8rem;
       font-family: 'Pretendard';
       background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
       .label {
         font-size: 1.8rem;
         line-height: 2.1rem;
@@ -283,11 +280,6 @@
     .cate-swiper {
       margin-top: 2.4rem;
       margin-bottom: 9rem;
-      &.fixed {
-        top: 14rem;
-        margin: 0;
-        padding: 2rem 8rem;
-      }
     }
     .work-sortItem {
       .lbl {
