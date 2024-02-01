@@ -1,0 +1,32 @@
+{
+  "name": "하이유엑스컨설팅(구:타란유엑스컨설팅)",
+  "short_name": "하이유엑스컨설팅",
+  "description": "HiUX. 우리는 성공적인 비지니스 전략을 제시해 나가는 것을 목표로 합니다.",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "type": "image/png",
+  "icons": [
+      {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      },
+      {
+          "src": "/icon-256x256.png",
+          "sizes": "256x256",
+          "type": "image/png"
+      },
+      {
+          "src": "/icon-384x384.png",
+          "sizes": "384x384",
+          "type": "image/png"
+      },
+      {
+          "src": "/icon-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ]
+}
