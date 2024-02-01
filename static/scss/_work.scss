@@ -45,6 +45,7 @@
     width: 100%;
   }
   .grid {
+    margin: 0 -2rem;
     // display: grid;
     // box-sizing: border-box;
     // grid-gap: 1.2rem 0;
@@ -53,9 +54,10 @@
   .grid-item {
     //grid-column: span 12;
     width: 33.3333%;
+    box-sizing: border-box;
+    padding: 4rem 2rem;
   }
-  .grid-item:nth-child(4),
-  .grid-item:nth-child(5) {
+  .grid-item.width-50 {
     //grid-column: span 12;
     width: 50%;
   }
@@ -248,7 +250,7 @@
   .work-list {
     .cate-swiper {
       margin-top: 2.4rem;
-      margin-bottom: 13rem;
+      margin-bottom: 9rem;
     }
     .work-sortItem {
       .lbl {

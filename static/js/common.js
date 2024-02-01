@@ -263,8 +263,23 @@ function workUI() {
     layoutMode: 'fitRows'
   });
 
+  $grid.isotope('shuffle');
+
   $('.cate-swiper').on('click', '.work-sortItem', function () {
     var filterValue = $(this).attr('data-filter');
     $grid.isotope({ filter: filterValue });
+
+    var $gridItems = $(this).closest('.cate-swiper').find('.grid-item');
+
+    var visibleSiblings = $gridItems.siblings().filter(function () {
+      return $(this).css('display') !== 'none';
+    });
+
+    var fourthElement = visibleSiblings.eq(3);
+    var fifthElement = visibleSiblings.eq(4);
+
+    $gridItems.removeClass('width-50');
+    fourthElement.addClass('width-50');
+    fifthElement.addClass('width-50');
   });
 }
