@@ -300,8 +300,12 @@ function workUI() {
 // news
 function newsUI() {
   var $newsGrid = $('.news-wrap .grid').isotope({
-    layoutMode: 'packery',
-    itemSelector: '.grid-item'
+    percentPosition: true,
+    itemSelector: '.grid-item',
+    masonry: {}
+  });
+  $newsGrid.imagesLoaded().progress(function () {
+    $newsGrid.isotope('layout');
   });
 }
 

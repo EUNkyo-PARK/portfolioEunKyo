@@ -1,4 +1,46 @@
 @use 'sass:math';
+/* news list */
+.news-wrap {
+  .grid-item img {
+    width: 100%;
+  }
+  .grid {
+    box-sizing: border-box;
+  }
+  .grid-item {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4rem 0;
+    .news-item {
+      display: block;
+      box-sizing: border-box;
+      padding: 0 2rem;
+      .img-wrap {
+        display: inline-block;
+        width: calc(100% + 4rem);
+        margin: 0 -2rem;
+        img {
+          width: 100%;
+        }
+      }
+      .news-tit,
+      .news-txt {
+        display: block;
+      }
+      .news-tit {
+        font-size: 3.2rem;
+        font-weight: 700;
+        margin-top: 4rem;
+      }
+      .news-txt {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-top: 0.6rem;
+      }
+    }
+  }
+}
+
 .news-contents {
   .sub-tit {
     font-size: 4.8rem;
@@ -52,6 +94,31 @@
 
 /* 테블릿 */
 @media only screen and (min-width: 1024px) {
+  /* news list */
+  .news-wrap {
+    margin: 0 -4rem;
+    .grid-item {
+      width: 50%;
+      box-sizing: border-box;
+      padding: 6rem 4rem;
+      .news-item {
+        .news-tit,
+        .news-txt {
+          display: block;
+        }
+        .news-tit {
+          font-size: 3.2rem;
+          font-weight: 700;
+          margin-top: 4rem;
+        }
+        .news-txt {
+          font-size: 1.6rem;
+          font-weight: 400;
+          margin-top: 0.6rem;
+        }
+      }
+    }
+  }
   .news-contents {
     .inner {
       max-width: 100%;
@@ -90,6 +157,12 @@
 
 /* pc */
 @media only screen and (min-width: 1280px) {
+  /* news list */
+  .news-wrap {
+    .grid-item {
+      width: 33.3333%;
+    }
+  }
   .news-contents {
     .next-page-box {
       width: calc(100% + 52rem);
