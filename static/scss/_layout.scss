@@ -209,14 +209,12 @@
     width: 12rem;
     height: 4.4rem;
     margin-bottom: 8rem;
-    a {
-      background: url(../img/common/hic-logo.png) no-repeat 0 0 / cover;
-    }
+    background: url(../img/common/hic-logo.png) no-repeat 0 0 / cover;
   }
   .f-menu-list {
     display: none;
-    .menu-cell {
-      + .menu-cell {
+    .menu-li {
+      + .menu-li {
         margin-top: 2rem;
       }
     }

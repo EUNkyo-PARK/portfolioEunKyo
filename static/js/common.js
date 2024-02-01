@@ -5,6 +5,10 @@ $(function () {
 
 function commonUI() {
   // gnb 메뉴
+  const $gnbMenu = $('.commonGnb > ol');
+  const $gnbMenuClone = $gnbMenu.clone();
+  $('.f-menu-list').html($gnbMenuClone);
+
   let $gnbTxt = $('.commonGnb li a');
   const $title = $.trim($('#pageTit').text());
   $gnbTxt.each(function () {
@@ -282,4 +286,26 @@ function workUI() {
     fourthElement.addClass('width-50');
     fifthElement.addClass('width-50');
   });
+}
+
+/*** util ***/
+function wpRedirection(toUrl) {
+  if (toUrl) {
+    location.href = toUrl;
+  } else {
+    let $origin = location.origin;
+    let $pathname = location.pathname;
+
+    if ($pathname.indexOf('/wp/') >= 0) $pathname = $pathname.replace('/wp/', '/');
+
+    let $pathAry = $pathname.split('/');
+    $pathAry = $pathAry.filter((item) => item !== '');
+
+    if ($pathAry.length) {
+      if ($pathname.charAt($pathname.length - 1) === '/') $pathname = $pathname.slice(0, -1) + '.php';
+      if ($pathAry.length > 1 && $pathname.indexOf('/index') >= 0) $pathname = $pathname.replace('/index', '');
+    }
+
+    location.href = $origin + $pathname;
+  }
 }
