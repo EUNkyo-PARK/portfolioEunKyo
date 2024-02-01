@@ -17,7 +17,7 @@
     padding: 25rem 4rem 8rem;
     border-radius: 4rem;
     color: $white-color;
-    transition: transform 0.2s ease-out;
+    transition: background-size 0.2s ease-out;
     &.contact {
       background: $coral-color url(../img/contact/contact-bg.png) top right / 23rem no-repeat;
     }
@@ -35,7 +35,7 @@
       }
     }
     &:hover {
-      transform: translateY(-1.75rem) scale(1.05);
+      background-size: 25rem;
     }
   }
 }
@@ -105,17 +105,20 @@
       padding: 8rem 6rem;
       &.contact {
         margin-right: 4rem;
-        background: $coral-color url(../img/contact/contact-bg.png) center right / contain no-repeat;
+        background: $coral-color url(../img/contact/contact-bg.png) center right / 32.9rem no-repeat;
       }
       &.recruit {
         margin-top: 0;
-        background: #6246d5 url(../img/contact/recruit-bg.png) center right / contain no-repeat;
+        background: #6246d5 url(../img/contact/recruit-bg.png) center right / 32.9rem no-repeat;
       }
       .contact_txt {
         font-size: 2.8rem;
         .mail_address {
           margin-top: 4.8rem;
         }
+      }
+      &:hover {
+        background-size: 36rem;
       }
     }
   }
