@@ -105,8 +105,6 @@ function mainUI() {
   const cateList = document.querySelector('.contents-box');
   const scrollArea = $('.contents-group-box .inner');
 
-  document.querySelector;
-
   const btnMenu = document.querySelector('.contents-group-box .btn-open-career');
   let isDragging = false;
   let initialX;
