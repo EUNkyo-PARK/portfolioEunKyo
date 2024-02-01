@@ -332,6 +332,31 @@ function memeberUI() {
   let clickCount = 0;
   let clickTimeout;
 
+  const hiddenMenuBtnWrap = document.querySelector('.hidden-menu-btn');
+  const hiddenMenuBtn = hiddenMenuBtnWrap.querySelector('button');
+  const hiddenMenuWrap = document.querySelector('.hidden-menu-wrap');
+
+  function hiddenMenuOpen() {
+    hiddenMenuBtn.classList.add('on');
+    if (hiddenMenuWrap) hiddenMenuWrap.classList.add('open');
+  }
+
+  function hiddenMenuClose() {
+    hiddenMenuBtn.classList.remove('on');
+    if (hiddenMenuWrap) hiddenMenuWrap.classList.remove('open');
+  }
+
+  function hiddenMenuToggle() {
+    if (hiddenMenuBtnWrap) {
+      if (hiddenMenuBtnWrap.classList.contains('active')) {
+        hiddenMenuBtnWrap.classList.remove('active');
+        hiddenMenuClose();
+      } else {
+        hiddenMenuBtnWrap.classList.add('active');
+      }
+    }
+  }
+
   function footerLogoClickHandler() {
     clickTimeout = setTimeout(function () {
       clickCount = 0;
@@ -345,14 +370,30 @@ function memeberUI() {
     }
   }
 
-  function hiddenMenuToggle() {
-    const footerHidden = document.querySelector('.foot-hidden-wrap');
-    footerHidden.classList.toggle('active');
+  function hiddenMenuBtnHandler(e) {
+    e.preventDefault();
+    if (hiddenMenuBtn.classList.contains('on')) {
+      hiddenMenuClose();
+    } else {
+      hiddenMenuOpen();
+    }
   }
 
-  // 클릭 이벤트를 감지할 요소 선택
-  const footerLogo = document.querySelector('#footer .logo');
+  function hiddenMenuCloseHandler(e) {
+    const target = e.target;
+    if (target.classList.contains('btn-close')) {
+      e.preventDefault();
+      hiddenMenuBtn.classList.remove('on');
+      if (hiddenMenuWrap) hiddenMenuWrap.classList.remove('open');
+    }
+  }
 
-  // 클릭 이벤트 리스너 등록
+  const footerLogo = document.querySelector('#footer .logo');
   footerLogo.addEventListener('click', footerLogoClickHandler);
+  if (hiddenMenuBtn) {
+    hiddenMenuBtn.addEventListener('click', hiddenMenuBtnHandler);
+  }
+  if (hiddenMenuWrap) {
+    hiddenMenuWrap.addEventListener('click', hiddenMenuCloseHandler);
+  }
 }
