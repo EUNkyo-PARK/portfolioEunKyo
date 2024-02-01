@@ -275,7 +275,7 @@ function workUI() {
   var fourthElement = visibleSiblings.eq(3);
   var fifthElement = visibleSiblings.eq(4);
 
-  $grid.isotope('shuffle');
+  //$grid.isotope('shuffle');
 
   $('.cate-swiper').on('click', '.work-sortItem', function () {
     var filterValue = $(this).attr('data-filter');

@@ -5,6 +5,10 @@
     padding: 0 2rem;
     margin-bottom: 6.4rem;
     margin-top: 1.6rem;
+    &.fixed {
+      position: fixed;
+      top: 0;
+    }
   }
   .swiper-slide {
     width: auto;
