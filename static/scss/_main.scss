@@ -149,9 +149,8 @@
         a {
           display: block;
           width: 100%;
-          padding-bottom: 100%;
           position: relative;
-          height: -per(46rem);
+          height: 46rem;
           &:hover {
             .round-header {
               &::before {
