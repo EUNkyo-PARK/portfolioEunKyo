@@ -147,9 +147,11 @@
         padding: 0;
         background-color: transparent;
         a {
+          display: block;
+          width: 100%;
           padding-bottom: 100%;
           position: relative;
-          height: auto;
+          height: -per(46rem);
           &:hover {
             .round-header {
               &::before {
