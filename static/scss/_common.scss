@@ -37,6 +37,17 @@ body {
   font-size: 0;
   color: transparent;
 }
+.blind {
+  overflow: hidden;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  color: transparent;
+  line-height: 0;
+  text-indent: -9999px;
+  opacity: 0;
+}
+
 /****common****/
 //display
 .dp-block {

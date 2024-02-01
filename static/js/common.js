@@ -5,6 +5,10 @@ $(function () {
 
 function commonUI() {
   // gnb 메뉴
+  const $gnbMenu = $('.commonGnb > ol');
+  const $gnbMenuClone = $gnbMenu.clone();
+  $('.f-menu-list').html($gnbMenuClone);
+
   let $gnbTxt = $('.commonGnb li a');
   const $title = $.trim($('#pageTit').text());
   $gnbTxt.each(function () {

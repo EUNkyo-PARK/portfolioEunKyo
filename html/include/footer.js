@@ -2,14 +2,8 @@ function includeFooter() {
   let str = `
 <footer id="footer" class="footer">
   <div class="inner">
-    <div class="logo"><a href="main.html" role="button"></a></div>
+    <div class="logo" role="img" aria-label="하이유엑스컨설팅"></div>
     <div class="f-menu-list">
-      <ol>
-        <li class="menu-cell"><a href="#none" role="button">About</a></li>
-        <li class="menu-cell"><a href="#none" role="button">Work</a></li>
-        <li class="menu-cell"><a href="#none" role="button">News</a></li>
-        <li class="menu-cell"><a href="#none" role="button">Contact</a></li>
-      </ol>
     </div>
     <div class="f-info-grp">
       <div class="info-box">
