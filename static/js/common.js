@@ -26,7 +26,17 @@ function commonUI() {
     document.addEventListener('scroll', function () {
       const scrollTopValue = document.documentElement.scrollTop || document.body.scrollTop;
       const header = document.querySelector('.header');
+      const workCateSwiper = document.querySelector('.cate-swiper');
       const headerH = header.clientHeight;
+      // work 페이지에서만
+      if (workCateSwiper) {
+        const workCateSwiperH = workCateSwiper.clientHeight + headerH;
+        if (scrollTopValue >= workCateSwiperH) {
+          workCateSwiper.classList.add('fixed');
+        } else {
+          workCateSwiper.classList.remove('fixed');
+        }
+      }
 
       if (scrollTopValue >= headerH) {
         header.classList.add('fixed');
@@ -47,11 +57,13 @@ function commonUI() {
       }
     });
 
-    body.on('click', function (event) {
-      if (!openBtn.is(event.target) && !$('.commonGnb a').is(event.target)) {
-        $('body').removeClass('gnbPopup');
-      }
-    });
+    // body.on('click', function (event) {
+    //   if (!$('.commonGnb a').is(event.target) && !$('.commonGnb a').is(event.target)) {
+    //     $('body').removeClass('gnbPopup');
+    //   } else if (openBtn.is(event.target)) {
+    //     console.log(1);
+    //   }
+    // });
   }
 
   // 스크롤 top 버튼
