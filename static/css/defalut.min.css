@@ -1,0 +1,72 @@
+/* 화면낭독기 사용자용 */
+#hd_login_msg{position:absolute;top:0;left:0;font-size:0;line-height:0;overflow:hidden}
+.msg_sound_only, .sound_only{display:inline-block !important;position:absolute;top:0;left:0;margin:0 !important;padding:0 !important;font-size:0;line-height:0;border:0 !important;overflow:hidden !important}
+/* 본문 바로가기 */
+#skip_to_container a{z-index:100000;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0;overflow:hidden}
+#skip_to_container a:focus, #skip_to_container a:active{width:100%;height:75px;background:#21272e;color:#fff;font-size:2em;font-weight:bold;text-align:center;text-decoration:none;line-height:3.3em}
+
+
+/* 캡챠 자동등록(입력)방지 기본 -pc */
+#captcha{display:inline-block;position:relative}
+#captcha legend{position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden;}
+#captcha #captcha_img{height:40px;border:1px solid #898989;;vertical-align:top;padding:0;margin:0}
+#captcha #captcha_mp3{margin:0;padding:0;width:40px;height:40px;border:0;background:transparent;vertical-align:middle;overflow:hidden;cursor:pointer;background:url('../../../img/captcha2.png') no-repeat;text-indent:-999px;;border-radius:3px}
+#captcha #captcha_reload{margin:0;padding:0;width:40px;height:40px;border:0;background:transparent;vertical-align:middle;overflow:hidden;cursor:pointer;background:url('../../../img/captcha2.png') no-repeat  0 bottom;text-indent:-999px;border-radius:3px}
+#captcha #captcha_key{margin:0 0 0 3px;padding:0 5px;width:90px;height:40px;border:1px solid #ccc;background:#fff;/* font-size:1.333em; */font-weight:bold;text-align:center;border-radius:3px;vertical-align:top}
+#captcha #captcha_info{display:block;margin:5px 0 0;font-size:0.95em;letter-spacing:-0.1em}
+
+/* 캡챠 자동등록(입력)방지 기본 - mobile */
+#captcha.m_captcha audio{display:block;margin:0 0 5px;width:100%;}
+#captcha.m_captcha #captcha_img{width:160px;height:60px;border:1px solid #e9e9e9;margin-bottom:3px;margin-top:5px;display:block;}
+#captcha.m_captcha #captcha_reload{position:static;margin:0;padding:0;width:40px;height:40px;border:0;background:transparent;vertical-align:middle;overflow:hidden;cursor:pointer;background:url('../../../img/captcha2.png') no-repeat  0 bottom;text-indent:-999px}
+#captcha.m_captcha #captcha_reload span{display:none;}
+#captcha.m_captcha #captcha_key{margin:0;padding:0 5px;width:115px;height:29px;border:1px solid #b8c9c2;background:#f7f7f7;font-size:1.333em;font-weight:bold;text-align:center;line-height:29px;margin-left:3px}
+#captcha.m_captcha #captcha_info{display:block;margin:5px 0 0;font-size:0.95em;letter-spacing:-0.1em}
+#captcha.m_captcha #captcha_mp3{width:31px;height:31px;background:url('../../../img/captcha2.png') no-repeat 0 0 ;  vertical-align:top;overflow:hidden;cursor:pointer;text-indent:-9999px;border:none}
+
+
+/* 버튼 */
+a.btn,.btn{line-height:35px;height:35px;padding:0 10px;text-align:center;font-weight:bold;border:0;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;}
+  
+  a.btn01{display:inline-block;padding:7px;border:1px solid #ccc;background:#fafafa;color:#000;text-decoration:none;vertical-align:middle}
+  a.btn01:focus, a.btn01:hover{text-decoration:none}
+  button.btn01{display:inline-block;margin:0;padding:7px;border:1px solid #ccc;background:#fafafa;color:#000;text-decoration:none}
+  a.btn02{display:inline-block;padding:7px;border:1px solid #3b3c3f;background:#4b545e;color:#fff;text-decoration:none;vertical-align:middle;}
+  a.btn02:focus, .btn02:hover{text-decoration:none}
+  button.btn02{display:inline-block;margin:0;padding:7px;border:1px solid #3b3c3f;background:#4b545e;color:#fff;text-decoration:none}
+  
+  .btn_confirm{text-align:right} /* 서식단계 진행 */
+  
+  .btn_submit{border:0;background:#253dbe;color:#fff;;cursor:pointer;border:0;vertical-align:middle;}
+  .btn_submit:hover{background:#0025eb}
+  
+  a.btn_cancel{display:inline-block;background:#969696;color:#fff;text-decoration:none;vertical-align:middle;}
+  button.btn_cancel{display:inline-block;background:#969696;color:#fff;text-decoration:none;vertical-align:middle}
+  .btn_cancel:hover{background:#aaa;
+  }
+  a.btn_frmline, button.btn_frmline{display:inline-block;padding:0 5px;height:40px;border:0;background:#3c3c3c;border-radius:5px;color:#fff;text-decoration:none;vertical-align:top} /* 우편번호검색버튼 등 */
+  a.btn_frmline,
+  button.btn_frmline{font-size:1em}
+  
+  /* 게시판용 버튼 */
+  a.btn_b01,.btn_b01{display:inline-block;background:#4c4f6f;color:#fff;text-decoration:none;vertical-align:middle}
+  a.btn_b01:hover, .btn_b01:hover{background:#54598c}
+  a.btn_b02,.btn_b02{display:inline-block;background:#253dbe;padding:0 10px;color:#fff;text-decoration:none;border:0;vertical-align:middle;}
+  a.btn_b02:hover, .btn_b02:hover{background:#0025eb}
+  a.btn_b03, .btn_b03{display:inline-block;background:#fff;border:1px solid #b9bdd3;color:#646982;text-decoration:none;vertical-align:middle}
+  a.btn_b03:hover, .btn_b03:hover{background:#ebedf6}
+  a.btn_b04, .btn_b04{display:inline-block;background:#fff;border:1px solid #ccc;color:#707070;text-decoration:none;vertical-align:middle}
+  a.btn_b04:hover, .btn_b04:hover{color:#333;background:#f9f9f9}
+  a.btn_admin,.btn_admin{display:inline-block;background:#d13f4a;color:#fff;text-decoration:none;vertical-align:middle} /* 관리자 전용 버튼 */
+  a.btn_admin:hover, .btn_admin:hover{background:#ff3746}
+  
+  
+  /*컬러*/
+  .color_1{background:#169dd6}
+  .color_2{background:#14d53d}
+  .color_3{background:#3814ff}
+  .color_4{background:#7520c5}
