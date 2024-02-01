@@ -2,6 +2,7 @@
 /* work list */
 .work-list {
   .cate-swiper {
+    padding: 0 2rem;
     margin-bottom: 6.4rem;
     margin-top: 1.6rem;
   }
@@ -45,21 +46,15 @@
     width: 100%;
   }
   .grid {
-    margin: 0 -2rem;
-    // display: grid;
-    // box-sizing: border-box;
-    // grid-gap: 1.2rem 0;
-    // grid-template-columns: repeat(12, 1fr);
+    box-sizing: border-box;
   }
   .grid-item {
-    //grid-column: span 12;
-    width: 33.3333%;
+    width: 100%;
     box-sizing: border-box;
-    padding: 4rem 2rem;
+    padding: 0.6rem 0rem;
   }
   .grid-item.width-50 {
-    //grid-column: span 12;
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -181,7 +176,24 @@
 ========================================================================== */
 
 /* 테블릿 */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) {
+  /* work list */
+  .work-wrap {
+    .grid-item img {
+      width: 100%;
+    }
+    .grid {
+      box-sizing: border-box;
+    }
+    .grid-item {
+      width: 50%;
+      box-sizing: border-box;
+      padding: 2rem;
+    }
+    .grid-item.width-50 {
+      width: 50%;
+    }
+  }
   /* work */
 
   //br태그 show-hide
@@ -265,5 +277,13 @@
     }
   }
   .work-wrap {
+    margin: 0 -2rem;
+    .grid-item {
+      width: 33.3333%;
+      padding: 4rem 2rem;
+    }
+    .grid-item.width-50 {
+      width: 50%;
+    }
   }
 }
