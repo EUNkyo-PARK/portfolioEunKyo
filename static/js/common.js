@@ -1,6 +1,7 @@
 $(function () {
   commonUI();
   mainUI();
+  memeberUI();
 });
 
 function commonUI() {
@@ -293,4 +294,29 @@ function wpRedirection(toUrl) {
 
     location.href = $origin + $pathname;
   }
+}
+
+/** memeber **/
+function memeberUI() {
+  let clickCount = 0;
+  let clickTimeout;
+
+  function footerLogoClickHandler() {
+    clickTimeout = setTimeout(function () {
+      clickCount = 0;
+    }, 1000);
+
+    clickCount += 1;
+    if (clickCount >= 5) {
+      console.log('5번 이상 클릭되었습니다!');
+      clickCount = 0;
+      clearTimeout(clickTimeout);
+    }
+  }
+
+  // 클릭 이벤트를 감지할 요소 선택
+  const footerLogo = document.querySelector('#footer .logo');
+
+  // 클릭 이벤트 리스너 등록
+  footerLogo.addEventListener('click', footerLogoClickHandler);
 }
