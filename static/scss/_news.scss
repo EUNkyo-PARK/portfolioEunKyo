@@ -1,0 +1,99 @@
+@use 'sass:math';
+.news-contents {
+  .sub-tit {
+    font-size: 4.8rem;
+    font-weight: 800;
+    line-height: 5.7rem;
+  }
+  .sub-txt-box {
+    margin-top: 6.6rem;
+    padding: 0 2rem;
+  }
+  .sub-txt {
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  .next-page-box {
+    width: calc(100% + 2.4rem);
+    height: 32rem;
+    margin-left: -1.2rem;
+    background: no-repeat center center / cover;
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1.6rem;
+      height: 100%;
+      padding: 0 5.4rem;
+      color: $white-color;
+      font-size: 3.2rem;
+      line-height: 3.8rem;
+      font-family: 'Pretendard';
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      .label {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        text-transform: uppercase;
+        opacity: 0.7;
+      }
+      &.nxt-img {
+      }
+    }
+  }
+  + .footer {
+    margin-top: 0;
+  }
+}
+/* ==========================================================================
+	Media Queries for Responsive Design. (미디어 쿼리 분기점)
+========================================================================== */
+
+/* 테블릿 */
+@media only screen and (min-width: 1024px) {
+  .news-contents {
+    .inner {
+      max-width: 100%;
+    }
+    .sub-tit {
+      padding: 0;
+      font-size: 8rem;
+      line-height: 9.5rem;
+    }
+    .sub-txt-box {
+      margin-top: 11rem;
+      padding: 0;
+    }
+    .sub-txt {
+      font-weight: 500;
+      font-size: 3.2rem;
+      color: #555;
+    }
+    .next-page-box {
+      width: calc(100% + 16rem);
+      margin-left: -8rem;
+      height: 50rem;
+      background-attachment: fixed;
+      a {
+        row-gap: 2rem;
+        font-size: 6rem;
+        line-height: 7.1rem;
+        .label {
+          font-size: 2.4rem;
+          line-height: 2.8rem;
+        }
+      }
+    }
+  }
+}
+
+/* pc */
+@media only screen and (min-width: 1280px) {
+  .news-contents {
+    .next-page-box {
+      width: calc(100% + 52rem);
+      margin-left: -26rem;
+    }
+  }
+}
