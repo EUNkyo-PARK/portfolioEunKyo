@@ -76,7 +76,7 @@
 }
 .company-map {
   height: 47rem;
-  max-height: calc(100vh - 30rem);
+  max-height: -vh(100, 30rem, true);
   margin-top: 4.8rem;
   border-radius: 4rem;
 }
@@ -155,7 +155,7 @@
   /**/
   .company-map {
     height: 100rem;
-    max-height: calc(100vh - 24rem);
+    max-height: -vh(100, 24rem, true);
     margin-top: 10rem;
   }
 }

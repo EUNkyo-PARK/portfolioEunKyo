@@ -4,6 +4,9 @@
 @import url(./defalut.min.css);
 @import url(./custom.min.css);
 
+:root {
+  --vh: 1vh;
+}
 html {
   height: 100%;
   font-size: 62.5%;

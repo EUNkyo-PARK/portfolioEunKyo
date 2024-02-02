@@ -3,6 +3,15 @@ $(function () {
   mainUI();
   memeberUI();
 });
+$(window).on('resize', function () {
+  vhChk();
+});
+
+vhChk();
+function vhChk() {
+  const $vh = window.innerHeight * 0.01;
+  $('html').css('--vh', $vh + 'px');
+}
 
 function commonUI() {
   // gnb 메뉴
@@ -23,26 +32,20 @@ function commonUI() {
     const body = $('body');
     const openBtn = $('.header .btn-menu');
 
+    let prevSclTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
     document.addEventListener('scroll', function () {
-      const scrollTopValue = document.documentElement.scrollTop || document.body.scrollTop;
+      const nowSclTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      const sclDirection = nowSclTop > prevSclTop ? 'down' : 'up';
+      const sclDistance = Math.abs(nowSclTop - prevSclTop);
+      const elArray = [];
       const header = document.querySelector('.header');
+      if (header) elArray.push(header);
       const workCateSwiper = document.querySelector('.cate-swiper');
-      const headerH = header.clientHeight;
-      // work 페이지에서만
-      if (workCateSwiper) {
-        const workCateSwiperH = workCateSwiper.clientHeight + headerH;
-        if (scrollTopValue >= workCateSwiperH) {
-          workCateSwiper.classList.add('fixed');
-        } else {
-          workCateSwiper.classList.remove('fixed');
-        }
-      }
+      if (workCateSwiper) elArray.push(workCateSwiper);
 
-      if (scrollTopValue >= headerH) {
-        header.classList.add('fixed');
-      } else {
-        header.classList.remove('fixed');
-      }
+      if (elArray.length) fixedClassChk(elArray, nowSclTop, sclDirection, sclDistance);
+
+      prevSclTop = nowSclTop;
     });
 
     openBtn.on('click', function () {
@@ -106,6 +109,24 @@ function commonUI() {
   }
   menuPop();
   scrollTop();
+}
+
+function fixedClassChk(elArray, nowSclTop, sclDirection, sclDistance) {
+  elArray.forEach(function (item) {
+    const itemEnd = getOffset(item).top + item.offsetHeight;
+    if (nowSclTop > itemEnd) {
+      item.classList.add('fixed');
+      if (sclDistance > 5) {
+        if (sclDirection === 'down') {
+          item.classList.add('is-up');
+        } else {
+          item.classList.remove('is-up');
+        }
+      }
+    } else {
+      item.classList.remove('fixed', 'is-up');
+    }
+  });
 }
 
 // 메인
@@ -230,6 +251,7 @@ function mainUI() {
 
 //map
 function kakakoMapInit(imgsrc, imgWidth, imgHeight) {
+  if (typeof kakao === 'undefined') return;
   const mapContainer = document.getElementById('companyMap');
   if (!mapContainer) return;
   const mapLocation = {
@@ -350,13 +372,45 @@ function wpRedirection(toUrl) {
   }
 }
 
+function getOffset(element) {
+  let $el = element;
+  let $elX = 0;
+  let $elY = 0;
+  let isSticky = false;
+  while ($el && !Number.isNaN($el.offsetLeft) && !Number.isNaN($el.offsetTop)) {
+    let $style = window.getComputedStyle($el);
+    // const $matrix = new WebKitCSSMatrix($style.transform);
+    if ($style.position === 'sticky') {
+      isSticky = true;
+      $el.style.position = 'static';
+    }
+    $elX += $el.offsetLeft;
+    // $elX += $matrix.m41; //translateX
+    $elY += $el.offsetTop;
+    // $elY += $matrix.m42;  //translateY
+    if (isSticky) {
+      isSticky = false;
+      $el.style.position = '';
+      if ($el.getAttribute('style') === '') $el.removeAttribute('style');
+    }
+    $el = $el.offsetParent;
+    if ($el !== null) {
+      $style = window.getComputedStyle($el);
+      $elX += parseInt($style.borderLeftWidth);
+      $elY += parseInt($style.borderTopWidth);
+    }
+  }
+  return { left: $elX, top: $elY };
+}
+
 /** memeber **/
 function memeberUI() {
   let clickCount = 0;
   let clickTimeout;
 
   const hiddenMenuBtnWrap = document.querySelector('.hidden-menu-btn');
-  const hiddenMenuBtn = hiddenMenuBtnWrap.querySelector('button');
+  let hiddenMenuBtn;
+  if (hiddenMenuBtnWrap) hiddenMenuBtn = hiddenMenuBtnWrap.querySelector('button');
   const hiddenMenuWrap = document.querySelector('.hidden-menu-wrap');
 
   function hiddenMenuOpen() {
