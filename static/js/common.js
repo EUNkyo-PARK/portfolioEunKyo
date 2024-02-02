@@ -304,6 +304,25 @@ function newsUI() {
     itemSelector: '.grid-item',
     masonry: {}
   });
+  const grid = document.querySelector$('.news-wrap .grid');
+  const images = grid.querySelectorAll('img');
+  let loadedCount = 0;
+
+  function checkAllImagesLoaded() {
+    loadedCount++;
+    if (loadedCount === images.length) {
+      console.log('All images loaded successfully.');
+      // 여기에서 모든 이미지가 로드되었을 때 수행할 작업을 추가할 수 있습니다.
+    }
+  }
+
+  images.forEach((image) => {
+    if (image.complete) {
+      checkAllImagesLoaded();
+    } else {
+      image.addEventListener('load', checkAllImagesLoaded);
+    }
+  });
   // $newsGrid.imagesLoaded().progress(function () {
   //   $newsGrid.isotope('layout');
   // });
