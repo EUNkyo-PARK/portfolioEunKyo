@@ -8,6 +8,11 @@
     &.fixed {
       position: fixed;
       top: 0;
+      padding: 1rem 1.2rem;
+      margin: 0;
+      width: 100%;
+      background-color: $white-color;
+      left: 0;
     }
   }
   .swiper-slide {
@@ -280,6 +285,9 @@
     .cate-swiper {
       margin-top: 2.4rem;
       margin-bottom: 9rem;
+      &.fixed {
+        padding: 2rem 8rem;
+      }
     }
     .work-sortItem {
       .lbl {

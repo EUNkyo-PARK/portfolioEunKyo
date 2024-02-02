@@ -326,18 +326,18 @@ function newsUI() {
     itemSelector: '.grid-item',
     masonry: {}
   });
-  const grid = document.querySelector$('.news-wrap .grid');
+  const grid = document.querySelector('.news-wrap .grid');
   const images = grid.querySelectorAll('img');
   let loadedCount = 0;
 
+  // 이미지 로드 완료후에 isotope 실행
   function checkAllImagesLoaded() {
     loadedCount++;
     if (loadedCount === images.length) {
-      console.log('All images loaded successfully.');
-      // 여기에서 모든 이미지가 로드되었을 때 수행할 작업을 추가할 수 있습니다.
+      $newsGrid.isotope('layout');
     }
   }
-
+  // 이미지 로드 완료 체크
   images.forEach((image) => {
     if (image.complete) {
       checkAllImagesLoaded();
@@ -345,9 +345,6 @@ function newsUI() {
       image.addEventListener('load', checkAllImagesLoaded);
     }
   });
-  // $newsGrid.imagesLoaded().progress(function () {
-  //   $newsGrid.isotope('layout');
-  // });
 }
 
 /*** util ***/
