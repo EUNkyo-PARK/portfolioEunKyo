@@ -3,6 +3,15 @@ $(function () {
   mainUI();
   memeberUI();
 });
+$(window).on('resize', function () {
+  vhChk();
+});
+
+vhChk();
+function vhChk() {
+  const $vh = window.innerHeight * 0.01;
+  $('html').css('--vh', $vh + 'px');
+}
 
 function commonUI() {
   // gnb 메뉴

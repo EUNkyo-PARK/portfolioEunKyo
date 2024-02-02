@@ -7,3 +7,15 @@
 @function -per($height, $width) {
   @return math.div($height, $width) * 100%;
 }
+
+@function -vh($val: 1, $add: null, $isMinus: false) {
+  @if ($add) {
+    @if ($isMinus) {
+      @return calc((var(--vh) * #{$val}) - #{$add});
+    } @else {
+      @return calc((var(--vh) * #{$val}) + #{$add});
+    }
+  } @else {
+    @return calc(var(--vh) * #{$val});
+  }
+}
