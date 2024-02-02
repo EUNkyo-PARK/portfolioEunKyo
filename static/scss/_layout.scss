@@ -12,8 +12,11 @@
     position: fixed;
     background-color: #fff;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    &.is-up {
+      box-shadow: none;
+      transform: translateY(-100%);
+    }
   }
   .inner {
     position: relative;
@@ -363,8 +366,6 @@
     border-radius: 2.4rem;
     opacity: 0;
     box-shadow: 0.8rem 0.8rem 3rem 0 rgba(0, 0, 0, 0.12), 0.2rem 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.08);
-    -webkit-box-shadow: 0.8rem 0.8rem 3rem 0 rgba(0, 0, 0, 0.12), 0.2rem 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.08);
-    -moz-box-shadow: 0.8rem 0.8rem 3rem 0 rgba(0, 0, 0, 0.12), 0.2rem 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.08);
     transition: 0.3s ease-out all;
     ol {
       justify-content: flex-start;
