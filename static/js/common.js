@@ -130,7 +130,8 @@ function fixedClassChk(elArray, nowSclTop, sclDirection, sclDistance) {
 }
 
 // 메인
-//let mainBanner;
+let $mainBanner;
+let $mainWork;
 function mainUI() {
   if (!$('#wrapper').hasClass('main')) return;
   const wrapper = document.querySelector('#container');
@@ -144,7 +145,7 @@ function mainUI() {
   let initialY;
 
   // 메인 배너 스와이퍼
-  const mainBanner = new Swiper('.main-swiper', {
+  $mainBanner = new Swiper('.main-swiper', {
     loop: true,
     preventInteractionOnTransition: false,
     pagination: {
@@ -154,7 +155,7 @@ function mainUI() {
   });
 
   // 메인 work 스와이퍼
-  const workSlider = new Swiper('.small-swiper', {
+  $mainWork = new Swiper('.small-swiper', {
     slidesPerView: 'auto'
   });
 
@@ -288,40 +289,43 @@ function kakakoMapInit(imgsrc, imgWidth, imgHeight) {
 }
 
 // Work
+let cateSwiper;
+let $workGrid;
 function workUI() {
-  const cateSwiper = new Swiper('.cate-swiper', {
+  cateSwiper = new Swiper('.cate-swiper', {
     slidesPerView: 'auto',
     itemSelector: '.grid-item'
   });
 
-  const $grid = $('.work-wrap .grid').isotope({
+  $workGrid = $('.work-wrap .grid').isotope({
     layoutMode: 'packery',
     itemSelector: '.grid-item'
   });
 
-  const $gridItems = $('.work-wrap .grid-item');
-  const visibleSiblings = $gridItems.siblings().filter(function () {
-    return $gridItems.css('display') !== 'none';
+  const $workGridItems = $('.work-wrap .grid-item');
+  const visibleSiblings = $workGridItems.siblings().filter(function () {
+    return $workGridItems.css('display') !== 'none';
   });
 
   const fourthElement = visibleSiblings.eq(3);
   const fifthElement = visibleSiblings.eq(4);
 
-  //$grid.isotope('shuffle');
+  //$workGrid.isotope('shuffle');
 
   $('.cate-swiper').on('click', '.work-sortItem', function () {
     var filterValue = $(this).attr('data-filter');
-    $grid.isotope({ filter: filterValue });
+    $workGrid.isotope({ filter: filterValue });
 
-    $gridItems.removeClass('width-50');
+    $workGridItems.removeClass('width-50');
     fourthElement.addClass('width-50');
     fifthElement.addClass('width-50');
   });
 }
 
 // news
+let $newsGrid;
 function newsUI() {
-  var $newsGrid = $('.news-wrap .grid').isotope({
+  $newsGrid = $('.news-wrap .grid').isotope({
     percentPosition: true,
     itemSelector: '.grid-item',
     masonry: {}
