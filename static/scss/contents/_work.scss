@@ -169,8 +169,21 @@
   + .footer {
     margin-top: 0;
   }
+
+  &.news {
+    .info-box {
+      margin-top: 6.6rem;
+      margin-bottom: 2.4rem;
+    }
+    .visual-img-box {
+      margin-top: 4.8rem;
+    }
+  }
 }
 .detail-area {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 3rem;
   .detail-cell {
     width: 100%;
     height: auto;
@@ -267,6 +280,19 @@
         }
       }
     }
+    &.news {
+      .info-box {
+        margin-top: 12rem;
+        margin-bottom: 2rem;
+      }
+      .visual-img-box {
+        margin-top: 4;
+      }
+    }
+  }
+  .detail-area {
+    font-size: 2rem;
+    line-height: 3.2rem;
   }
 }
 
