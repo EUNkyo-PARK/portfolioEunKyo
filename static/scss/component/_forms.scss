@@ -623,3 +623,71 @@ div.checkbox {
     background-color: #f9ecec !important;
   }
 }
+@media only screen and (max-width: 760px) {
+  .button {
+    height: 30px;
+    max-width: 100%;
+    font-size: 1.2rem;
+    &.h25 {
+      height: 20px;
+      font-size: 1.1rem;
+    }
+    &.h60 {
+      height: 40px;
+      font-size: 1.4rem;
+    }
+  }
+  .input {
+    height: 30px;
+    line-height: 28px;
+    padding: 0 5px;
+    font-size: 12px;
+    &[type='file'] {
+      padding: 3px;
+      line-height: 16px;
+    }
+  }
+  .select {
+    height: 30px;
+    line-height: 28px;
+    padding-left: 5px;
+    font-size: 12px;
+  }
+  .textarea {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .table {
+    font-size: 12px;
+    th,
+    td {
+      padding: 10px 5px;
+    }
+    &.tbl_form {
+      display: block;
+      tr,
+      th,
+      td {
+        display: block;
+      }
+      th {
+        text-align: left;
+        br {
+          display: none;
+        }
+      }
+      &.tbl_left {
+        tr:first-child {
+          th,
+          td {
+            border-color: #ccc;
+          }
+          th:first-child {
+            border-top-color: #666;
+          }
+        }
+      }
+    }
+  }
+}
