@@ -297,7 +297,7 @@ function workUI() {
     itemSelector: '.grid-item'
   });
 
-  // 기본 4/5번째 width-50 클래스 추가
+  // 디폴트 4/5번째 width-50 클래스 추가
   const $workGridItems = $('.work-wrap .grid-item').eq(3).add($('.work-wrap .grid-item').eq(4));
   $workGridItems.addClass('width-50');
 
