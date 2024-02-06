@@ -130,7 +130,8 @@ function fixedClassChk(elArray, nowSclTop, sclDirection, sclDistance) {
 }
 
 // 메인
-//let mainBanner;
+let $mainBanner;
+let $mainWork;
 function mainUI() {
   if (!$('#wrapper').hasClass('main')) return;
   const wrapper = document.querySelector('#container');
@@ -144,7 +145,7 @@ function mainUI() {
   let initialY;
 
   // 메인 배너 스와이퍼
-  const mainBanner = new Swiper('.main-swiper', {
+  $mainBanner = new Swiper('.main-swiper', {
     loop: true,
     preventInteractionOnTransition: false,
     pagination: {
@@ -154,14 +155,14 @@ function mainUI() {
   });
 
   // 메인 work 스와이퍼
-  const workSlider = new Swiper('.small-swiper', {
+  $mainWork = new Swiper('.small-swiper', {
     slidesPerView: 'auto'
   });
 
   // 메인 휠 스크롤,터치 무브 이벤트
   wrapper.addEventListener('mousedown', handleMouseDown);
-  dragElement.addEventListener('touchstart', handleTouchStart);
-  dragElement.addEventListener('wheel', handleWheel);
+  dragElement.addEventListener('touchstart', handleTouchStart, { passive: true });
+  dragElement.addEventListener('wheel', handleWheel, { passive: true });
 
   document.addEventListener('mousemove', handleDrag);
   document.addEventListener('touchmove', handleTouchMove);
@@ -288,40 +289,43 @@ function kakakoMapInit(imgsrc, imgWidth, imgHeight) {
 }
 
 // Work
+let cateSwiper;
+let $workGrid;
 function workUI() {
-  const cateSwiper = new Swiper('.cate-swiper', {
+  cateSwiper = new Swiper('.cate-swiper', {
     slidesPerView: 'auto',
     itemSelector: '.grid-item'
   });
 
-  const $grid = $('.work-wrap .grid').isotope({
+  // 디폴트 4/5번째 width-50 클래스 추가
+  const $workGridItems = $('.work-wrap .grid-item').eq(3).add($('.work-wrap .grid-item').eq(4));
+  $workGridItems.addClass('width-50');
+
+  $workGrid = $('.work-wrap .grid').isotope({
     layoutMode: 'packery',
     itemSelector: '.grid-item'
   });
 
-  const $gridItems = $('.work-wrap .grid-item');
-  const visibleSiblings = $gridItems.siblings().filter(function () {
-    return $gridItems.css('display') !== 'none';
-  });
-
-  const fourthElement = visibleSiblings.eq(3);
-  const fifthElement = visibleSiblings.eq(4);
-
-  //$grid.isotope('shuffle');
-
   $('.cate-swiper').on('click', '.work-sortItem', function () {
     var filterValue = $(this).attr('data-filter');
-    $grid.isotope({ filter: filterValue });
+    $workGrid.isotope({ filter: filterValue });
 
-    $gridItems.removeClass('width-50');
-    fourthElement.addClass('width-50');
-    fifthElement.addClass('width-50');
+    //레이아웃 카드 중 4/5번째의 width-50 클래스 추가
+    let iso = $workGrid.data('isotope');
+    $.each(iso.filteredItems, function (i, item) {
+      if (i === 3 || i === 4) {
+        $(item.element).addClass('width-50');
+      } else if (i !== 3 && i !== 4) {
+        $(item.element).removeClass('width-50');
+      }
+    });
   });
 }
 
 // news
+let $newsGrid;
 function newsUI() {
-  var $newsGrid = $('.news-wrap .grid').isotope({
+  $newsGrid = $('.news-wrap .grid').isotope({
     percentPosition: true,
     itemSelector: '.grid-item',
     masonry: {}
@@ -463,6 +467,7 @@ function memeberUI() {
   }
 
   const footerLogo = document.querySelector('#footer .logo');
+  if (!footerLogo) return;
   footerLogo.addEventListener('click', footerLogoClickHandler);
   if (hiddenMenuBtn) {
     hiddenMenuBtn.addEventListener('click', hiddenMenuBtnHandler);
