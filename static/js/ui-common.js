@@ -467,6 +467,7 @@ function memeberUI() {
   }
 
   const footerLogo = document.querySelector('#footer .logo');
+  if (!footerLogo) return;
   footerLogo.addEventListener('click', footerLogoClickHandler);
   if (hiddenMenuBtn) {
     hiddenMenuBtn.addEventListener('click', hiddenMenuBtnHandler);

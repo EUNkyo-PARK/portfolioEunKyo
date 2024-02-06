@@ -1,4 +1,4 @@
-@import 'mixin', 'function', 'variables';
+@import 'base/mixin', 'base/function', 'base/variables';
 
 input.required,
 textarea.required {
@@ -586,8 +586,36 @@ textarea.required {
   text-align: center;
 }
 
+/* 리스트 */
+.table {
+  .td_chk {
+    width: 50px;
+  }
+  .td_num,
+  .td_num2 {
+    width: 70px;
+  }
+  .td_name {
+    width: 110px;
+  }
+  .td_datetime {
+    width: 80px;
+  }
+  .td_subject {
+    text-align: left;
+  }
+  .bo_notice td {
+    background: #e6f8ff !important;
+    border-bottom: 1px solid #c3dfe8;
+    a {
+      font-weight: bold;
+    }
+  }
+  .sv_use .fa {
+    display: none;
+  }
+}
 /* 상세 */
-/* list_view */
 .list_view {
   border-top: 1px solid #222;
   border-bottom: 1px solid #ddd;
