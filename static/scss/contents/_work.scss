@@ -71,21 +71,21 @@
 .pc-break {
   display: none;
 }
-.work-contents {
+.view-page {
   .inner {
     padding: 0;
+  }
+  .view-inner {
+    padding: 0 3.2rem;
   }
   .sub-tit {
     font-size: 4.8rem;
     font-weight: 800;
     line-height: 5.7rem;
-    padding: 0 3.2rem;
+    padding: 0;
   }
   .sub-txt-box {
     margin-top: 6.6rem;
-    padding: 0 3.2rem;
-  }
-  .sub-txt {
     font-weight: 600;
     font-size: 1.8rem;
   }
@@ -215,21 +215,21 @@
     display: inline-block;
   }
 
-  .work-contents {
+  .view-page {
     .inner {
       max-width: 100%;
     }
+    .view-inner {
+      padding: 0 10rem;
+    }
     .sub-tit {
       padding: 0;
-      padding: 0 10rem;
+
       font-size: 8rem;
       line-height: 9.5rem;
     }
     .sub-txt-box {
       margin-top: 11rem;
-      padding: 0 10rem;
-    }
-    .sub-txt {
       font-weight: 500;
       font-size: 3.2rem;
       color: #555;
@@ -293,9 +293,8 @@
       }
     }
   }
-  .work-contents {
-    .sub-tit,
-    .sub-txt-box {
+  .view-page {
+    .view-inner {
       padding: 0 26rem;
     }
   }
