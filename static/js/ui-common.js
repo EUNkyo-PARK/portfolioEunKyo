@@ -297,28 +297,28 @@ function workUI() {
     itemSelector: '.grid-item'
   });
 
+  // 기본 4/5번째 width-50 클래스 추가
+  const $workGridItems = $('.work-wrap .grid-item').eq(3).add($('.work-wrap .grid-item').eq(4));
+  $workGridItems.addClass('width-50');
+
   $workGrid = $('.work-wrap .grid').isotope({
     layoutMode: 'packery',
     itemSelector: '.grid-item'
   });
 
-  const $workGridItems = $('.work-wrap .grid-item');
-  const visibleSiblings = $workGridItems.siblings().filter(function () {
-    return $workGridItems.css('display') !== 'none';
-  });
-
-  const fourthElement = visibleSiblings.eq(3);
-  const fifthElement = visibleSiblings.eq(4);
-
-  //$workGrid.isotope('shuffle');
-
   $('.cate-swiper').on('click', '.work-sortItem', function () {
     var filterValue = $(this).attr('data-filter');
     $workGrid.isotope({ filter: filterValue });
 
-    $workGridItems.removeClass('width-50');
-    fourthElement.addClass('width-50');
-    fifthElement.addClass('width-50');
+    //레이아웃 카드 중 4/5번째의 width-50 클래스 추가
+    let iso = $workGrid.data('isotope');
+    $.each(iso.filteredItems, function (i, item) {
+      if (i === 3 || i === 4) {
+        $(item.element).addClass('width-50');
+      } else if (i !== 3 && i !== 4) {
+        $(item.element).removeClass('width-50');
+      }
+    });
   });
 }
 
