@@ -304,8 +304,7 @@ function workUI() {
     return $gridItems.css('display') !== 'none';
   });
 
-  const fourthElement = visibleSiblings.eq(3);
-  const fifthElement = visibleSiblings.eq(4);
+  const fourthElement = visibleSiblings;
 
   //$grid.isotope('shuffle');
 
@@ -315,7 +314,7 @@ function workUI() {
 
     $gridItems.removeClass('width-50');
     fourthElement.addClass('width-50');
-    fifthElement.addClass('width-50');
+    // fifthElement.addClass('width-50');
   });
 }
 
