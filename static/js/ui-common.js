@@ -161,8 +161,8 @@ function mainUI() {
 
   // 메인 휠 스크롤,터치 무브 이벤트
   wrapper.addEventListener('mousedown', handleMouseDown);
-  dragElement.addEventListener('touchstart', handleTouchStart);
-  dragElement.addEventListener('wheel', handleWheel);
+  dragElement.addEventListener('touchstart', handleTouchStart, { passive: true });
+  dragElement.addEventListener('wheel', handleWheel, { passive: true });
 
   document.addEventListener('mousemove', handleDrag);
   document.addEventListener('touchmove', handleTouchMove);
