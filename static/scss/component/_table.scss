@@ -1,19 +1,16 @@
 .table {
   border-top: 1px solid #999;
-  font-size: 14px;
+  font-size: 1.4rem;
   /* table-layout:fixed; */
   th,
   td {
     border-bottom: 1px solid #ddd;
     text-align: center;
     word-break: break-all;
+    padding: 1.5rem 1rem;
   }
   th {
-    padding: 15px 10px;
     color: #222;
-  }
-  td {
-    padding: 15px 10px;
   }
   thead {
     th {
@@ -73,5 +70,10 @@
   }
   .bg strong {
     color: #222;
+  }
+  .empty_table {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #999;
   }
 }
