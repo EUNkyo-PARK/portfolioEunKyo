@@ -130,8 +130,10 @@
     }
   }
   .visual-img-box {
+    text-align: center;
+    background-color: #fafafa;
     img {
-      width: 100%;
+      max-width: 100%;
     }
   }
   .next-page-box {
