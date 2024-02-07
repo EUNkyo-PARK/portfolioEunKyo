@@ -11,6 +11,11 @@
     width: 100%;
     box-sizing: border-box;
     padding: 4rem 0;
+    > .checkbox {
+      position: absolute;
+      top: 5rem;
+      left: 1rem;
+    }
     .news-item {
       display: block;
       box-sizing: border-box;
@@ -130,6 +135,10 @@
       width: 50%;
       box-sizing: border-box;
       padding: 6rem 4rem;
+      > .checkbox {
+        top: 7rem;
+        left: 5rem;
+      }
       .news-item {
         .news-tit,
         .news-txt {
