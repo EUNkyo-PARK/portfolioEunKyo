@@ -184,6 +184,9 @@
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 3rem;
+  img {
+    max-width: 100%;
+  }
   .detail-cell {
     width: 100%;
     height: auto;
