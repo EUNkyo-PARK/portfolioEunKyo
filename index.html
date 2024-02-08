@@ -12,20 +12,18 @@
     <meta property="og:description" content="하이유엑스컨설팅(구:타란유엑스컨설팅), HI UX. 우리는 성공적인 비지니스 전략을 제시해 나가는 것을 목표로 합니다." />
     <meta property="og:url" content="http://hiuxc.com" />
     <meta property="og:site_name" content="하이유엑스컨설팅(구:타란유엑스컨설팅)" />
-    <meta property="og:image" content="./static/images/ogp_image.png" />
+    <meta property="og:image" content="./static/img/ogp_image.png" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="./static/images/favicon/favicon.png" />
-    <link rel="icon" type="image/x-icon" href="./static/images/favicon/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="./static/img/favicon/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="./static/img/favicon/favicon.png" />
 
     <meta name="apple-mobile-web-app-title" content="하이유엑스컨설팅" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <!-- https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
-    <!-- <link rel="apple-touch-startup-image" href="./static/images/favicon/launch.png" /> -->
-    <link rel="apple-touch-icon" href="./static/images/favicon/touch-icon-iphone.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="./static/images/favicon/touch-icon-ipad.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./static/images/favicon/touch-icon-iphone-retina.png" />
-    <link rel="apple-touch-icon" sizes="167x167" href="./static/images/favicon/touch-icon-ipad-retina.png" />
+    <link rel="apple-touch-icon" href="./static/img/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./static/img/favicon/touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/img/favicon/touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="./static/img/favicon/touch-icon-ipad-retina.png" />
     <link rel="manifest" href="./static/css/manifest.json" />
 
     <!-- css -->
@@ -38,5 +36,132 @@
     <script src="./static/js/lib/jquery-3.7.1.min.js"></script>
     <script src="./static/js/lib/jquery-migrate-3.4.0.min.js"></script>
     <script src="./static/js/lib/swiper-bundle.11.0.5.min.js"></script>
+
+    <div id="wrapper" class="">
+      <div class="contents-area" id="container">
+        <!-- header -->
+        <script class="__include" src="./html/include/header.js"></script>
+        <!-- contents -->
+        <div class="container">
+          <div class="inner">
+            <h4 class="flex align-center space-between mb-10">
+              <strong class="">HTML 목록</strong>
+              <span class="ml-auto">화면 개수 : <span class="page-length"></span></span>
+            </h4>
+            <table class="table" style="border-bottom: 2px #72727248 solid">
+              <colgroup>
+                <col style="width: 16.666%" />
+                <col style="width: 16.666%" />
+                <col style="width: auto" />
+                <col style="width: 16.666%" />
+                <col style="width: 16.666%" />
+                <col style="width: 10%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>1 depth</th>
+                  <th>2 depth</th>
+                  <th>화면 HTML 명</th>
+                  <th>작업자</th>
+                  <th>비고</th>
+                  <th>진행상황</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top: 2px #72727248 solid">
+                  <th class="t-center">Main</th>
+                  <td>메인 페이지</td>
+                  <td><a href="/html/main.html" target="_blank" title="새창열림">main.html</a></td>
+                  <td>박은교</td>
+                  <td></td>
+                  <td class="fc-blue">완료</td>
+                </tr>
+                <tr style="border-top: 2px #72727248 solid">
+                  <th rowspan="4" class="t-center">Work</th>
+                  <td>Work list</td>
+                  <td><a href="/html/work.html" target="_blank" title="새창열림">work</a></td>
+                  <td>변상우</td>
+                  <td></td>
+                  <td class="fc-blue">완료</td>
+                </tr>
+                <tr>
+                  <td>view - KB 스타뱅킹</td>
+                  <td><a href="/html/work_kbapp_page.html.html" target="_blank" title="새창열림">work_kbapp_page.html</a></td>
+                  <td>박은교</td>
+                  <td></td>
+                  <td class="fc-blue">완료</td>
+                </tr>
+                <tr>
+                  <td>view - 교보 끌</td>
+                  <td><a href="/html/work_kbkkl_page.html" target="_blank" title="새창열림">work_kbkkl_page.html</a></td>
+                  <td>박은교</td>
+                  <td></td>
+                  <td class="fc-blue">완료</td>
+                </tr>
+                <tr>
+                  <td>view - 마블링</td>
+                  <td><a href="/html/work_kbkkl_page.html" target="_blank" title="새창열림">work_marbling_page.html</a></td>
+                  <td>박은교</td>
+                  <td></td>
+                  <td class="fc-blue">완료</td>
+                </tr>
+                <tr style="border-top: 2px #72727248 solid">
+                  <th class="t-center">About</th>
+                  <td>About</td>
+                  <td><a href="/html/about.html" target="_blank" title="새창열림">about.html</a></td>
+                  <td>최재석</td>
+                  <td></td>
+                  <td class="fc-blue">완료</td>
+                </tr>
+                <tr style="border-top: 2px #72727248 solid">
+                  <th class="t-center">Contact</th>
+                  <td>Contact</td>
+                  <td><a href="/html/contact.html" target="_blank" title="새창열림">Contact.html</a></td>
+                  <td>최재석</td>
+                  <td></td>
+                  <td class="fc-blue">완료</td>
+                </tr>
+                <tr style="border-top: 2px #72727248 solid">
+                  <th rowspan="2" class="t-center">News</th>
+                  <td>News list</td>
+                  <td><a href="/html/news.html" target="_blank" title="새창열림">news</a></td>
+                  <td>변상우</td>
+                  <td></td>
+                  <td class="fc-blue">완료</td>
+                </tr>
+                <tr>
+                  <td>view</td>
+                  <td><a href="/html/news_view.html" target="_blank" title="새창열림">news_view.html</a></td>
+                  <td>박은교</td>
+                  <td></td>
+                  <td class="fc-blue">완료</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <script class="__include" src="./html/include/footer.js"></script>
+        <!-- footer end -->
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="./static/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="./static/js/lib/jquery-migrate-3.4.0.min.js"></script>
+    <script src="./static/js/ui-common.js"></script>
+    <script>
+      // 테이블 내에 a 테그(페이지 수) 구해서 넣기
+      const table = document.querySelector('.table');
+      const aTags = table.getElementsByTagName('a');
+      const pageLengthSpan = document.querySelector('.page-length');
+
+      let count = 0;
+      for (let i = 0; i < aTags.length; i++) {
+        count++;
+      }
+      pageLengthSpan.textContent = count;
+    </script>
   </body>
 </html>
