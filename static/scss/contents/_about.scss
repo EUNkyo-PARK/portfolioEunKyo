@@ -44,6 +44,14 @@
 ========================================================================== */
 /* pc */
 @media only screen and (min-width: 1280px) {
+  .about-area {
+    .inner {
+      padding: 0 8rem;
+    }
+    .sub-tit {
+      padding-left: 18rem;
+    }
+  }
 }
 
 /* 테블릿 */
@@ -51,7 +59,7 @@
   /* about */
   .about-wrap {
     height: 100rem;
-    margin-top: 20rem;
+    margin-top: 12rem;
     &:after {
       background-color: rgba($color: #000000, $alpha: 0.3);
     }
