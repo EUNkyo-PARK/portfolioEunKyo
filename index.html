@@ -187,7 +187,6 @@
     <script src="./static/js/lib/jquery-migrate-3.4.0.min.js"></script>
     <script src="./static/js/ui-common.js"></script>
     <script>
-      // 테이블 내에 a 테그(페이지 수) 구해서 넣기
       const table = document.querySelector('.table');
       const aTags = table.getElementsByTagName('a');
       const pageLengthSpan = document.querySelector('.page-length');
@@ -197,12 +196,12 @@
       for (let i = 0; i < aTags.length; i++) {
         count++;
       }
+      // 총 페이지수
       pageLengthSpan.textContent = count;
 
       for (var i = 0; i < tdList.length; i++) {
         let td = tdList[i];
-
-        // current-worked 클래스를 가진 td 요소 중에 텍스트가 '완료'인 경우 completed 클래스를 추가합니다.
+        // 완료 텍스트가 들어가면 completed 클래스 추가
         if (td.classList.contains('current-worked') && td.textContent.trim() === '완료') {
           td.classList.add('completed');
         }
