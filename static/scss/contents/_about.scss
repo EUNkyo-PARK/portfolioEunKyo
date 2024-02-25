@@ -7,7 +7,7 @@
   max-height: -vh(100, 48rem, true);
   margin-top: 12rem;
   border-radius: 4rem;
-  background: url(../img/about/bg-about01.png) center / cover no-repeat;
+  background: url(../img/about/bg-visual-about.png) center / cover no-repeat;
   overflow: hidden;
   color: $white-color;
   &:after {
@@ -39,6 +39,24 @@
     }
   }
 }
+.about-list {
+  padding: 0 2.5rem;
+  .tit {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 3.5rem 0 1rem 0;
+  }
+  dl {
+    display: flex;
+    gap: 2rem;
+    padding-left: 3.5rem;
+  }
+  dt {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
 /* ==========================================================================
 	Media Queries for Responsive Design. (미디어 쿼리 분기점)
 ========================================================================== */
@@ -50,6 +68,9 @@
     }
     .sub-tit {
       padding-left: 18rem;
+    }
+    .about-list {
+      padding: 0 18rem;
     }
   }
 }
@@ -74,6 +95,23 @@
           display: none;
         }
       }
+    }
+  }
+
+  .about-list {
+    padding: 0 3.5rem;
+    .tit {
+      font-size: 4rem;
+      margin: 5.5rem 0 2.5rem 0;
+    }
+    dl {
+      gap: 3rem;
+      padding-left: 4.5rem;
+      font-size: 2.5rem;
+    }
+    dt {
+      text-transform: uppercase;
+      font-weight: 700;
     }
   }
 }

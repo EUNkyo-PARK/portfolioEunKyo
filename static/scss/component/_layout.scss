@@ -45,11 +45,11 @@
   .h1 {
     font-size: 0;
     a {
-      width: 7.2rem;
-      height: 2.6rem;
+      width: 5rem;
+      height: 5rem;
       font-size: 0;
       display: inline-block;
-      background: url(../img/common/hic-logo-blk.png) no-repeat 0 0 / cover;
+      background: url(../img/common/mainlogo.png) no-repeat 0 0 / cover;
     }
   }
   .btn-menu {
@@ -214,9 +214,9 @@
   color: $white-color;
   .logo {
     width: 12rem;
-    height: 4.4rem;
+    height: 12rem;
     margin-bottom: 8rem;
-    background: url(../img/common/hic-logo.png) no-repeat 0 0 / contain;
+    background: url(../img/common/mainlogo-white.png) no-repeat 0 0 / cover;
   }
   .f-menu-list {
     display: none;
@@ -345,8 +345,8 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: 14.1rem;
-      height: 5.1rem;
+      width: 16rem;
+      height: 16rem;
     }
     .copyright {
       position: absolute;
@@ -361,7 +361,7 @@
     position: absolute;
     right: 0rem;
     width: 32.4rem;
-    height: 47.8rem;
+    height: 34.8rem;
     border-radius: 2.4rem;
     opacity: 0;
     box-shadow: 0.8rem 0.8rem 3rem 0 rgba(0, 0, 0, 0.12), 0.2rem 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.08);
@@ -392,7 +392,7 @@
     }
     .h1 {
       position: absolute;
-      top: 6.1rem;
+      top: 3rem;
       left: 8rem;
       z-index: 50;
     }

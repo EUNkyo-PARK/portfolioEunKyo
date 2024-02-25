@@ -41,7 +41,7 @@
       .context-box {
         position: absolute;
         left: 3.2rem;
-        top: 12rem;
+        top: 15rem;
         color: $white-color;
         .tag {
           font-size: 2rem;
@@ -106,7 +106,7 @@
     }
     .swiper-pagination {
       top: auto;
-      bottom: 28.2rem;
+      bottom: 10rem;
       left: 3.2rem;
       text-align: left;
       width: auto;
@@ -118,7 +118,7 @@
       }
       .swiper-pagination-bullet-active {
         width: 3rem;
-        background-color: $coral-color;
+        background-color: $main-color;
         border-radius: 1rem;
       }
     }
@@ -243,16 +243,10 @@
             transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) all;
           }
           &.-uxw::before {
-            background-image: url(../img/main/bg-boxImage01.png);
+            background-image: url(../img/main/img-typocell01.png);
           }
           &.-uxm::before {
-            background-image: url(../img/main/bg-boxImage02.png);
-          }
-          &.-ai::before {
-            background-image: url(../img/main/bg-boxImage03.png);
-          }
-          &.-vui::before {
-            background-image: url(../img/main/bg-boxImage04.png);
+            background-image: url(../img/main/img-typocell02.png);
           }
         }
       }
@@ -263,6 +257,13 @@
           width: 27.2rem;
           + .slide-cell {
             margin-left: 1.2rem;
+          }
+        }
+
+        &.-icon {
+          .slide-cell {
+            height: 15rem;
+            width: 15rem;
           }
         }
         a {
@@ -278,7 +279,11 @@
             }
           }
         }
-
+        a {
+          position: relative;
+          width: 27.2rem;
+          height: 34.6rem;
+        }
         .preview-box {
           position: absolute;
           top: 0;
@@ -302,10 +307,17 @@
           text-align: left;
           color: $black-color;
           .tit {
-            width: 50%;
+            width: 80%;
             font-weight: 700;
             font-size: 2.4rem;
             line-height: 2.8rem;
+            color: $white-color;
+          }
+          .subtit {
+            margin-top: 1rem;
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
             color: $white-color;
           }
           .txt {
@@ -337,9 +349,12 @@
         z-index: inherit;
         .h1 {
           position: absolute;
-          top: 2.7rem;
+          top: 1.5rem;
           left: 3.2rem;
           z-index: 50;
+          a {
+            background: url(../img/common/mainlogo.png) no-repeat 0 0 / cover;
+          }
         }
         .btn-menu {
           position: fixed;
@@ -463,7 +478,7 @@
         }
       }
       .swiper-pagination {
-        bottom: 26.5rem;
+        bottom: 12rem;
         left: 16rem;
         .swiper-pagination-bullet {
           width: 1rem;
@@ -539,12 +554,23 @@
             .preview-box {
               border-radius: $br-40;
             }
+            &.-icon {
+              .preview-box {
+                position: relative;
+                height: -vw(220);
+                width: -vw(220);
+              }
+            }
             .context-box {
               top: 3.2rem;
               left: 3.2rem;
               .tit {
                 font-size: max(3.2rem, -vw(32));
                 line-height: max(3.8rem, -vw(32));
+              }
+              .subtit {
+                font-size: max(2rem, -vw(20));
+                line-height: max(2.2rem, -vw(20));
               }
               .txt {
                 font-size: max(1.6rem, -vw(16));
@@ -553,6 +579,7 @@
             }
             .slide-cell {
               width: auto;
+              height: auto;
               + .slide-cell {
                 margin-left: 4rem;
               }

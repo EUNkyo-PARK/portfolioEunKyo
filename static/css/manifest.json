@@ -1,7 +1,7 @@
 {
-  "name": "하이유엑스컨설팅(구:타란유엑스컨설팅)",
-  "short_name": "하이유엑스컨설팅",
-  "description": "HiUX. 우리는 성공적인 비지니스 전략을 제시해 나가는 것을 목표로 합니다.",
+  "name": "퍼블리셔 박은교의 포트폴리오입니다",
+  "short_name": "박은교 포트폴리오",
+  "description": "Love More, Laugh More, See the World!",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
