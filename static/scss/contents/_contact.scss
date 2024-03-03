@@ -8,8 +8,10 @@
   font-weight: 700;
 }
 .contact-wrap {
+  display: flex;
   margin-top: 7rem;
   flex-direction: column;
+  gap: 1.6rem;
   .contact-box {
     width: 100%;
     height: 47rem;
@@ -19,11 +21,10 @@
     color: $white-color;
     transition: background-size 0.2s ease-out;
     &.contact {
-      background: $coral-color url(../img/contact/contact-bg.png) top right / 23rem no-repeat;
+      background: #efbba2 url(../img/contact/contact-bg.png) top right / 23rem no-repeat;
     }
     &.recruit {
-      margin-top: 1.6rem;
-      background: #6246d5 url(../img/contact/recruit-bg.png) top right / 23rem no-repeat;
+      background: #84b2f7 url(../img/contact/recruit-bg.png) top right / 23rem no-repeat;
     }
     .contact_txt {
       font-size: 2.4rem;
@@ -32,6 +33,7 @@
         margin-top: 2.4rem;
         font-size: 3.2rem;
         text-decoration: underline;
+        word-break: break-all;
       }
     }
     &:hover {
@@ -97,19 +99,18 @@
     line-height: 6.4rem;
   }
   .contact-wrap {
+    gap: 4rem;
     flex-direction: row;
     margin-top: 8rem;
     .contact-box {
-      width: 50%;
+      flex: 1;
       height: 34rem;
       padding: 8rem 6rem;
       &.contact {
-        margin-right: 4rem;
-        background: $coral-color url(../img/contact/contact-bg.png) center right / 32.9rem no-repeat;
+        background: #efbba2 url(../img/contact/contact-bg.png) center right / 32.9rem no-repeat;
       }
       &.recruit {
-        margin-top: 0;
-        background: #6246d5 url(../img/contact/recruit-bg.png) center right / 32.9rem no-repeat;
+        background: #84b2f7 url(../img/contact/recruit-bg.png) center right / 32.9rem no-repeat;
       }
       .contact_txt {
         font-size: 2.8rem;
